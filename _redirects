@@ -1,1 +1,8 @@
 /* https://daan.vosdewael.com
+
+# Redirect domain aliases to primary domain
+https://vosdewael.dev/* https://daan.vosdewael.dev/:splat 301!
+https://www.vosdewael.dev/* https://daan.vosdewael.dev/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://daanvosdewaeldev.netlify.com/* https://daan.vosdewael.dev/:splat 301!
