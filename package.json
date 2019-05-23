@@ -1,0 +1,11 @@
+{
+  "name": "daan.vosdewael.dev",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daanvosdewael/daan.vosdewael.dev.git"
+  },
+  "author": "Daan Vos de Wael <daan@demarrage.io>",
+  "license": "MIT"
+}
