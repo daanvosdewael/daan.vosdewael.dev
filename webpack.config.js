@@ -1,0 +1,101 @@
+const path = require('path')
+
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin')
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const SortCssMediaQueries = require('sort-css-media-queries')
+
+const env = process.env.NODE_ENV
+const minify = env === 'production'
+const sourceMap = env === 'development'
+
+const config = {
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+    },
+
+    devtool: sourceMap ? 'inline-source-map' : undefined,
+
+    entry: './src/assets/js/app.js',
+
+    mode: env,
+
+    module: {
+        rules: [
+            {
+                exclude: /node_modules/,
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            sourceMap,
+                            url: false,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [
+                                require('postcss-import')(),
+                                require('postcss-mixins')(),
+                                require('postcss-preset-env')({
+                                    features: {
+                                        'custom-properties': {
+                                            preserve: false,
+                                        },
+                                        'nesting-rules': true,
+                                    },
+                                    stage: 2,
+                                }),
+                                require('css-mqpacker')({
+                                    sort: SortCssMediaQueries,
+                                }),
+                            ],
+                            sourceMap,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
+
+    output: {
+        filename: 'assets/[name].[chunkhash:7].js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
+    },
+
+    plugins: [
+        new CleanWebpackPlugin(),
+
+        new MiniCssExtractPlugin({ filename: 'assets/styles.[contenthash:7].css' }),
+
+        new HtmlWebpackPlugin({
+            excludeAssets: [/main.*.js/],
+            favicon: 'src/favicon.ico',
+            inlineSource: '.css$',
+            minify: minify ? { collapseWhitespace: true } : false,
+            template: 'src/index.html',
+        }),
+
+        new HtmlWebpackExcludeAssetsPlugin(),
+
+        new HtmlWebpackInlineSourcePlugin(),
+
+        new CopyWebpackPlugin([{ from: 'src/_redirects', to: '[name].[ext]' }]),
+    ],
+}
+
+if (minify) {
+    config.plugins.push(new OptimizeCSSAssetsPlugin())
+}
+
+module.exports = config

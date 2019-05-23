@@ -7,5 +7,159 @@
     "url": "https://github.com/daanvosdewael/daan.vosdewael.dev.git"
   },
   "author": "Daan Vos de Wael <daan@demarrage.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
+    "css-mqpacker": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "html-webpack-exclude-assets-plugin": "^0.0.7",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss": "^7.0.16",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.1",
+    "postcss-preset-env": "^6.6.0",
+    "prettier": "^1.17.1",
+    "sort-css-media-queries": "^1.4.3",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0",
+    "stylelint-prettier": "^1.1.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": [
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "curly": [
+        "error",
+        "all"
+      ],
+      "lines-around-comment": [
+        "error",
+        {
+          "beforeBlockComment": true,
+          "beforeLineComment": true,
+          "allowBlockStart": true
+        }
+      ],
+      "no-var": "error",
+      "one-var": [
+        "error",
+        "never"
+      ],
+      "padding-line-between-statements": [
+        "error",
+        {
+          "blankLine": "always",
+          "prev": "*",
+          "next": "return"
+        }
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "any",
+          "ignoreReadBeforeAssign": true
+        }
+      ],
+      "prefer-template": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 120,
+          "semi": false,
+          "singleQuote": true,
+          "tabWidth": 4,
+          "trailingComma": "all"
+        }
+      ],
+      "quotes": [
+        "error",
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": false
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-prettier/recommended"
+    ],
+    "plugins": [
+      "stylelint-prettier",
+      "stylelint-order"
+    ],
+    "rules": {
+      "at-rule-no-unknown": true,
+      "at-rule-no-vendor-prefix": true,
+      "color-named": "never",
+      "declaration-block-no-redundant-longhand-properties": true,
+      "declaration-no-important": true,
+      "font-family-name-quotes": "always-where-recommended",
+      "font-weight-notation": "numeric",
+      "function-url-quotes": "always",
+      "media-feature-name-no-vendor-prefix": true,
+      "order/properties-alphabetical-order": true,
+      "prettier/prettier": [
+        true,
+        {
+          "printWidth": 120,
+          "singleQuote": true,
+          "tabWidth": 4
+        }
+      ],
+      "property-no-unknown": true,
+      "property-no-vendor-prefix": true,
+      "selector-nested-pattern": "^&",
+      "selector-no-vendor-prefix": true,
+      "shorthand-property-no-redundant-values": true,
+      "value-no-vendor-prefix": true
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
 }
