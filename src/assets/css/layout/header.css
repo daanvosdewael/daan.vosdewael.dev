@@ -1,0 +1,84 @@
+header {
+    @media (max-width: 999px) {
+        margin-top: 1.625em;
+    }
+
+    @media (min-width: 1000px) {
+        height: 100vh;
+        left: 50%;
+        position: fixed;
+        top: 0;
+        transform: translateX(-50%);
+        width: 16.25em;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1199px) {
+        margin-left: -21.875em;
+    }
+
+    @media (min-width: 1200px) {
+        margin-left: -28.125em;
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 0.8;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    @media (min-width: 1000px) {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    & span {
+        display: block;
+        font-weight: 200;
+    }
+}
+
+.l-links {
+    display: flex;
+
+    @media (max-width: 999px) {
+        justify-content: center;
+        margin-top: 0.375em;
+    }
+
+    @media (min-width: 1000px) {
+        left: 50%;
+        margin-top: 7.875em;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    & a {
+        align-items: center;
+        background-color: transparent;
+        display: flex;
+        height: 3em;
+        justify-content: center;
+        outline: none;
+        transition: background-color 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96),
+            box-shadow 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+        width: 3em;
+
+        &:focus {
+            background-color: #fff;
+            box-shadow: 0 0.1875em 0.375em rgba(0, 0, 0, 0.15), 0 0.125em 0.25em rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    & svg {
+        height: 1.5em;
+        stroke: var(--blueColor);
+        width: 1.5em;
+    }
+}

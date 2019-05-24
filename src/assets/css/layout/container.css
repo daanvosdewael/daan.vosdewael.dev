@@ -1,0 +1,38 @@
+.l-main {
+    flex: 1 0 auto;
+
+    &::before {
+        background-color: var(--blueColor);
+        content: '';
+        height: 0.5em;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+
+    @media (max-width: 999px) {
+        margin-top: 1em;
+        padding: 0;
+        width: calc(100vw - 1.25rem);
+    }
+
+    @media (min-width: 1000px) {
+        margin-top: 4em;
+        padding: 0 1.25em;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1199px) {
+        width: 62.5em;
+    }
+
+    @media (min-width: 1200px) {
+        width: 75em;
+    }
+}
