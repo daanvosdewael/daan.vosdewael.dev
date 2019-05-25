@@ -42,7 +42,7 @@ section {
     }
 
     @media (min-width: 1000px) {
-        padding: 1.375em 2em 1.9375em;
+        padding: 0.875em 2em 1.9375em;
 
         &:last-child {
             margin-bottom: 4em;
