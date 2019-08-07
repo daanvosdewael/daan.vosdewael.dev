@@ -13,17 +13,11 @@
     "build": "cross-env NODE_ENV=production webpack"
   },
   "devDependencies": {
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "babel-eslint": "10.0.2",
     "clean-webpack-plugin": "3.0.0",
     "copy-webpack-plugin": "5.0.4",
     "cross-env": "5.2.0",
     "css-loader": "3.2.0",
     "css-mqpacker": "7.0.0",
-    "eslint": "6.1.0",
-    "eslint-config-prettier": "6.0.0",
-    "eslint-plugin-prettier": "3.1.0",
     "html-webpack-exclude-assets-plugin": "0.0.7",
     "html-webpack-inline-source-plugin": "0.0.10",
     "html-webpack-plugin": "3.2.0",
@@ -44,84 +38,6 @@
     "webpack": "4.39.1",
     "webpack-cli": "3.3.6",
     "webpack-dev-server": "3.7.2"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "modules": false
-        }
-      ]
-    ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
-    },
-    "extends": [
-      "plugin:prettier/recommended"
-    ],
-    "rules": {
-      "curly": [
-        "error",
-        "all"
-      ],
-      "lines-around-comment": [
-        "error",
-        {
-          "beforeBlockComment": true,
-          "beforeLineComment": true,
-          "allowBlockStart": true
-        }
-      ],
-      "no-var": "error",
-      "one-var": [
-        "error",
-        "never"
-      ],
-      "padding-line-between-statements": [
-        "error",
-        {
-          "blankLine": "always",
-          "prev": "*",
-          "next": "return"
-        }
-      ],
-      "prefer-const": [
-        "error",
-        {
-          "destructuring": "any",
-          "ignoreReadBeforeAssign": true
-        }
-      ],
-      "prefer-template": "error",
-      "prettier/prettier": [
-        "error",
-        {
-          "printWidth": 120,
-          "semi": false,
-          "singleQuote": true,
-          "tabWidth": 4,
-          "trailingComma": "all"
-        }
-      ],
-      "quotes": [
-        "error",
-        "single",
-        {
-          "avoidEscape": true,
-          "allowTemplateLiterals": false
-        }
-      ]
-    },
-    "plugins": [
-      "prettier"
-    ]
   },
   "stylelint": {
     "extends": [
