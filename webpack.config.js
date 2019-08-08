@@ -13,6 +13,13 @@ const env = process.env.NODE_ENV
 const minify = env === 'production'
 const sourceMap = env === 'development'
 
+const htmlWebpackPluginBaseConfig = {
+    excludeAssets: [/main.*.js/],
+    favicon: 'src/favicon.ico',
+    inlineSource: '.css$',
+    minify: minify ? { collapseWhitespace: true } : false,
+}
+
 const config = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -78,13 +85,15 @@ const config = {
 
         new MiniCssExtractPlugin({ filename: 'assets/styles.[contenthash:7].css' }),
 
-        new HtmlWebpackPlugin({
-            excludeAssets: [/main.*.js/],
-            favicon: 'src/favicon.ico',
-            inlineSource: '.css$',
-            minify: minify ? { collapseWhitespace: true } : false,
+        new HtmlWebpackPlugin({...htmlWebpackPluginBaseConfig, ...{
+            filename: 'index.html',
             template: 'src/index.html',
-        }),
+        }}),
+
+        new HtmlWebpackPlugin({...htmlWebpackPluginBaseConfig, ...{
+            filename: 'about.html',
+            template: 'src/about.html',
+        }}),
 
         new HtmlWebpackExcludeAssetsPlugin(),
 
