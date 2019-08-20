@@ -45,21 +45,24 @@ h1 {
 
 .l-links {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
 
     @media (max-width: 999px) {
         justify-content: center;
-        margin-top: 0.375em;
+        margin-top: 0.5em;
     }
 
     @media (min-width: 1000px) {
         left: 50%;
-        margin-top: 7.875em;
+        margin-top: 8.9375em;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
     }
 
-    & a {
+    & > a {
         align-items: center;
         background-color: transparent;
         display: flex;
@@ -80,5 +83,27 @@ h1 {
         height: 1.5em;
         stroke: var(--blueColor);
         width: 1.5em;
+    }
+}
+
+.l-links__about {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    text-align: center;
+
+    & a {
+        color: var(--blueColor);
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.5;
+        outline: none;
+        text-decoration: none;
+        transition: background-color 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96), color 200ms cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+        &:focus,
+        &:hover {
+            background-color: var(--blueColor);
+            color: #fff;
+        }
     }
 }
