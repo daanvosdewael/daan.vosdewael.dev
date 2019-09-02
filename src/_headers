@@ -1,5 +1,5 @@
 /*
-    Content-Security-Policy-Report-Only: default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' *.cloudfront.net; font-src https://fonts.gstatic.com
+    Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' *.cloudfront.net; font-src https://fonts.gstatic.com
     Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'
     Referrer-Policy: strict-origin-when-cross-origin
     X-Content-Type-Options: nosniff
