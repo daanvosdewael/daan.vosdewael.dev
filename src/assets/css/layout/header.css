@@ -19,27 +19,28 @@ header {
     @media (min-width: 1200px) {
         margin-left: -28.125em;
     }
-}
 
-h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 0.8;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
+    & h1,
+    & p {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 0.8;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
 
-    @media (min-width: 1000px) {
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
+        @media (min-width: 1000px) {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-    & span {
-        display: block;
-        font-weight: 200;
+        & span {
+            display: block;
+            font-weight: 200;
+        }
     }
 }
 

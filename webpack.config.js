@@ -91,15 +91,18 @@ const config = {
         }}),
 
         new HtmlWebpackPlugin({...htmlWebpackPluginBaseConfig, ...{
-            filename: 'about.html',
-            template: 'src/about.html',
+            filename: 'about-me.html',
+            template: 'src/about-me.html',
         }}),
 
         new HtmlWebpackExcludeAssetsPlugin(),
 
         new HtmlWebpackInlineSourcePlugin(),
 
-        new CopyWebpackPlugin([{ from: 'src/_redirects', to: '[name].[ext]' }]),
+        new CopyWebpackPlugin([{
+            from: 'src/_redirects', to: '[name].[ext]',
+            from: 'src/assets/img', to: 'img/[name].[ext]',
+        }]),
     ],
 }
 

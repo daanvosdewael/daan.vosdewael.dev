@@ -36,3 +36,20 @@ main {
         width: 75em;
     }
 }
+
+.l-items,
+.l-about {
+    width: 100%;
+
+    @media (min-width: 1000px) {
+        margin-left: auto;
+    }
+
+    @media (min-width: 1000px) and (max-width: 1199px) {
+        width: 41.25em;
+    }
+
+    @media (min-width: 1200px) {
+        width: 47.5em;
+    }
+}
