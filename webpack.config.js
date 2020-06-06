@@ -99,13 +99,15 @@ const config = {
 
         new HtmlWebpackInlineSourcePlugin(),
 
-        new CopyWebpackPlugin([
-            { from: 'src/_headers', to: '[name].[ext]' },
-            { from: 'src/_redirects', to: '[name].[ext]' },
-            { from: 'src/assets/img/*.jpg', to: 'img/[name].[ext]' },
-            { from: 'src/robots.txt', to: '[name].[ext]' },
-            { from: 'src/sitemap.xml', to: '[name].[ext]' },
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'src/_headers', to: '[name].[ext]' },
+                { from: 'src/_redirects', to: '[name].[ext]' },
+                { from: 'src/assets/img/*.jpg', to: 'img/[name].[ext]' },
+                { from: 'src/robots.txt', to: '[name].[ext]' },
+                { from: 'src/sitemap.xml', to: '[name].[ext]' },
+            ]
+        }),
     ],
 }
 
