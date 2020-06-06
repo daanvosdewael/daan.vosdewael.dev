@@ -3,8 +3,8 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
-const { HtmlWebpackSkipAssetsPlugin } = require('html-webpack-skip-assets-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { HtmlWebpackSkipAssetsPlugin } = require('html-webpack-skip-assets-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const SortCssMediaQueries = require('sort-css-media-queries')
@@ -97,7 +97,7 @@ const config = {
 
         new HtmlWebpackSkipAssetsPlugin(),
 
-        new HtmlWebpackInlineSourcePlugin(),
+        new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),
 
         new CopyWebpackPlugin({
             patterns: [
