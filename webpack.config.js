@@ -2,8 +2,8 @@ const path = require('path')
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackExcludeAssetsPlugin = require('html-webpack-exclude-assets-plugin')
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin')
+const { HtmlWebpackSkipAssetsPlugin } = require('html-webpack-skip-assets-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -14,10 +14,10 @@ const minify = env === 'production'
 const sourceMap = env === 'development'
 
 const htmlWebpackPluginBaseConfig = {
-    excludeAssets: [/main.*.js/],
     favicon: 'src/favicon.ico',
     inlineSource: '.css$',
     minify: minify ? { collapseWhitespace: true } : false,
+    skipAssets: [/main.*.js/],
 }
 
 const config = {
@@ -95,7 +95,7 @@ const config = {
             template: 'src/about-me.html',
         }}),
 
-        new HtmlWebpackExcludeAssetsPlugin(),
+        new HtmlWebpackSkipAssetsPlugin(),
 
         new HtmlWebpackInlineSourcePlugin(),
 
