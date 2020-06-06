@@ -7,7 +7,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { HtmlWebpackSkipAssetsPlugin } = require('html-webpack-skip-assets-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
-const SortCssMediaQueries = require('sort-css-media-queries')
 
 const env = process.env.NODE_ENV
 const minify = env === 'production'
@@ -62,9 +61,7 @@ const config = {
                                     },
                                     stage: 2,
                                 }),
-                                require('css-mqpacker')({
-                                    sort: SortCssMediaQueries,
-                                }),
+                                require('postcss-sort-media-queries')(),
                             ],
                             sourceMap,
                         },
