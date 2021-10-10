@@ -98,11 +98,11 @@ const config = {
 
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'src/_headers', to: '[name].[ext]' },
-                { from: 'src/_redirects', to: '[name].[ext]' },
-                { from: 'src/assets/fonts/*', to: 'fonts/[name].[ext]' },
-                { from: 'src/robots.txt', to: '[name].[ext]' },
-                { from: 'src/sitemap.xml', to: '[name].[ext]' },
+                { from: 'src/_headers' },
+                { from: 'src/_redirects' },
+                { from: 'src/assets/fonts/**/*', to: 'fonts/[name][ext]' },
+                { from: 'src/robots.txt', to: '[name][ext]' },
+                { from: 'src/sitemap.xml', to: '[name][ext]' },
             ]
         }),
     ],
