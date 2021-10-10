@@ -1,0 +1,12 @@
+main {
+    align-content: center;
+    background-color: var(--teal-50);
+    display: grid;
+    min-height: calc(100vh - 32px);
+    min-width: calc(100vw - 32px);
+
+    @media (min-width: 56.25em) {
+        align-content: initial;
+        grid-template-columns: 384px 1fr;
+    }
+}

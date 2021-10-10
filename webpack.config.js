@@ -6,22 +6,17 @@ const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { HtmlWebpackSkipAssetsPlugin } = require('html-webpack-skip-assets-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 const env = process.env.NODE_ENV
 const minify = env === 'production'
 const sourceMap = env === 'development'
 
-const htmlWebpackPluginBaseConfig = {
-    favicon: 'src/favicon.ico',
-    inlineSource: '.css$',
-    minify: minify ? { collapseWhitespace: true } : false,
-    skipAssets: [/main.*.js/],
-}
-
 const config = {
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        static: {
+            directory: path.join(__dirname, 'src', 'assets'),
+        },
     },
 
     devtool: sourceMap ? 'inline-source-map' : undefined,
@@ -48,21 +43,20 @@ const config = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
-                            plugins: () => [
-                                require('postcss-import')(),
-                                require('postcss-mixins')(),
-                                require('postcss-preset-env')({
-                                    features: {
-                                        'custom-properties': {
-                                            preserve: false,
+                            postcssOptions: {
+                                plugins: [
+                                    'postcss-import',
+                                    'postcss-nested',
+                                    {
+                                        'postcss-pxtorem': {
+                                            propList: [
+                                                '*',
+                                            ],
                                         },
-                                        'nesting-rules': true,
                                     },
-                                    stage: 2,
-                                }),
-                                require('postcss-sort-media-queries')(),
-                            ],
+                                    'postcss-sort-media-queries',
+                                ],
+                            },
                             sourceMap,
                         },
                     },
@@ -77,20 +71,26 @@ const config = {
         publicPath: '/',
     },
 
+    optimization: {
+        minimizer: [
+            `...`,
+            new CssMinimizerPlugin(),
+        ],
+    },
+
     plugins: [
         new CleanWebpackPlugin(),
 
         new MiniCssExtractPlugin({ filename: 'assets/styles.[contenthash:7].css' }),
 
-        new HtmlWebpackPlugin({...htmlWebpackPluginBaseConfig, ...{
+        new HtmlWebpackPlugin({
+            favicon: 'src/favicon.ico',
             filename: 'index.html',
+            inlineSource: '.css$',
+            minify: minify ? { collapseWhitespace: true } : false,
+            skipAssets: [/main.*.js/],
             template: 'src/index.html',
-        }}),
-
-        new HtmlWebpackPlugin({...htmlWebpackPluginBaseConfig, ...{
-            filename: 'about-me.html',
-            template: 'src/about-me.html',
-        }}),
+        }),
 
         new HtmlWebpackSkipAssetsPlugin(),
 
@@ -100,16 +100,12 @@ const config = {
             patterns: [
                 { from: 'src/_headers', to: '[name].[ext]' },
                 { from: 'src/_redirects', to: '[name].[ext]' },
-                { from: 'src/assets/img/*.jpg', to: 'img/[name].[ext]' },
+                { from: 'src/assets/fonts/*', to: 'assets/fonts/[name].[ext]' },
                 { from: 'src/robots.txt', to: '[name].[ext]' },
                 { from: 'src/sitemap.xml', to: '[name].[ext]' },
             ]
         }),
     ],
-}
-
-if (minify) {
-    config.plugins.push(new OptimizeCSSAssetsPlugin())
 }
 
 module.exports = config

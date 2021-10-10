@@ -10,7 +10,7 @@
   "author": "Daan Vos de Wael <daan@demarrage.io>",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server"
+    "dev": "cross-env NODE_ENV=development webpack serve"
   },
   "browserslist": [
     "last 2 versions",
@@ -52,29 +52,29 @@
     }
   },
   "devDependencies": {
-    "clean-webpack-plugin": "3.0.0",
-    "copy-webpack-plugin": "6.0.2",
-    "cross-env": "7.0.2",
-    "css-loader": "3.5.3",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "9.0.1",
+    "cross-env": "7.0.3",
+    "css-loader": "6.4.0",
+    "css-minimizer-webpack-plugin": "3.1.1",
     "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
-    "html-webpack-plugin": "4.3.0",
-    "html-webpack-skip-assets-plugin": "0.0.2",
-    "mini-css-extract-plugin": "0.9.0",
-    "optimize-css-assets-webpack-plugin": "5.0.3",
-    "postcss": "7.0.32",
-    "postcss-import": "12.0.1",
-    "postcss-loader": "3.0.0",
-    "postcss-mixins": "6.2.3",
-    "postcss-preset-env": "6.7.0",
-    "postcss-sort-media-queries": "1.6.24",
-    "prettier": "2.0.5",
-    "stylelint": "13.6.0",
-    "stylelint-config-prettier": "8.0.1",
-    "stylelint-config-standard": "20.0.0",
+    "html-webpack-plugin": "5.3.2",
+    "html-webpack-skip-assets-plugin": "1.0.2",
+    "mini-css-extract-plugin": "2.4.2",
+    "postcss": "8.3.9",
+    "postcss-import": "14.0.2",
+    "postcss-loader": "6.1.1",
+    "postcss-nested": "5.0.6",
+    "postcss-pxtorem": "6.0.0",
+    "postcss-sort-media-queries": "4.1.0",
+    "prettier": "2.4.1",
+    "stylelint": "13.13.1",
+    "stylelint-config-prettier": "8.0.2",
+    "stylelint-config-standard": "22.0.0",
     "stylelint-order": "4.1.0",
-    "stylelint-prettier": "1.1.2",
-    "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0"
+    "stylelint-prettier": "1.2.0",
+    "webpack": "5.58.1",
+    "webpack-cli": "4.9.0",
+    "webpack-dev-server": "4.3.1"
   }
 }
