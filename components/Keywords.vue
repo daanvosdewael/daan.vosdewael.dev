@@ -4,7 +4,7 @@
     </p>
 </template>
 
-<style lang="postcss" scoped>
+<style lang="postcss" module>
 .paragraph {
     font-size: 36px;
     font-style: italic;
