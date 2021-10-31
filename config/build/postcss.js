@@ -4,12 +4,14 @@ export default {
             'postcss-preset-env': false,
             'postcss-import': {},
             'postcss-nested': {},
+            'postcss-custom-media': {
+                importFrom: 'assets/css/base/breakpoints.css',
+            },
             'postcss-pxtorem': {
                 propList: [
                     '*',
                 ],
             },
-            'postcss-sort-media-queries': {},
         },
     },
 };
