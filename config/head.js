@@ -9,27 +9,6 @@ export default {
                 type: 'image/x-icon',
             },
             {
-                as: 'font',
-                crossorigin: 'anonymous',
-                href: '/fonts/NotoSerif-ExtraLight.woff2',
-                rel: 'preload',
-                type: 'font/woff2',
-            },
-            {
-                as: 'font',
-                crossorigin: 'anonymous',
-                href: '/fonts/NotoSerif-LightItalic.woff2',
-                rel: 'preload',
-                type: 'font/woff2',
-            },
-            {
-                as: 'font',
-                crossorigin: 'anonymous',
-                href: '/fonts/NotoSerif.woff2',
-                rel: 'preload',
-                type: 'font/woff2',
-            },
-            {
                 href: 'https://daan.vosdewael.dev/',
                 rel: 'canonical',
             },
