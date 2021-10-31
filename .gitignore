@@ -1,8 +1,12 @@
-# System
-.DS_Store
-
 # NPM
-node_modules/*
+node_modules/
 
 # Build
-dist/*
+.nuxt
+dist
+
+# Editor
+.vscode
+
+# System
+.DS_Store

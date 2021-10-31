@@ -1,4 +1,0 @@
-Sitemap: https://daan.vosdewael.dev/sitemap.xml
-
-User-agent: *
-Disallow:
