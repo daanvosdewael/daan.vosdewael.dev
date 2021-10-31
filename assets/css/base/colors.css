@@ -1,0 +1,17 @@
+:root {
+    /* #333 */
+    --gray-800-hsl: 0, 0%, 20%;
+    --gray-800: hsl(var(--gray-800-hsl));
+
+    /* #ebf3f3 */
+    --teal-50-hsl: 180, 25%, 94%;
+    --teal-50: hsl(var(--teal-50-hsl));
+
+    /* #cde5e5 */
+    --teal-100-hsl: 180, 32%, 85%;
+    --teal-100: hsl(var(--teal-100-hsl));
+
+    /* #fff */
+    --white-hsl: 0, 0%, 100%;
+    --white: hsl(var(--white-hsl));
+}
