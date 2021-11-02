@@ -16,6 +16,7 @@
     "not IE 11"
   ],
   "dependencies": {
+    "@nuxtjs/sitemap": "2.4.0",
     "core-js": "3.19.0",
     "nuxt": "2.15.8"
   },
