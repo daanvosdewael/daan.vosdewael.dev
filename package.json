@@ -31,7 +31,7 @@
     "@nuxtjs/netlify-files": "1.2.0",
     "eslint": "7.32.0",
     "eslint-plugin-jsdoc": "35.5.1",
-    "eslint-plugin-unicorn": "34.0.1",
+    "eslint-plugin-unicorn": "38.0.0",
     "eslint-plugin-vue": "7.20.0",
     "eslint-plugin-vuejs-accessibility": "0.7.1",
     "lint-staged": "11.2.6",
