@@ -34,7 +34,7 @@
     "eslint-plugin-unicorn": "34.0.1",
     "eslint-plugin-vue": "7.20.0",
     "eslint-plugin-vuejs-accessibility": "0.7.1",
-    "lint-staged": "12.1.1",
+    "lint-staged": "12.1.2",
     "postcss-custom-media": "8.0.0",
     "postcss-import": "14.0.2",
     "postcss-nested": "5.0.6",
