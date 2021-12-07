@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "@nuxtjs/sitemap": "2.4.0",
-    "core-js": "3.19.2",
+    "core-js": "3.19.3",
     "nuxt": "2.15.8"
   },
   "devDependencies": {
