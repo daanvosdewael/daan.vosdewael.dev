@@ -9,6 +9,7 @@ import modules from './config/modules';
 export default {
     components: true,
     target: 'static',
+    telemetry: false,
     ...build,
     ...buildModules,
     ...css,
