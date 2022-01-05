@@ -1,0 +1,10 @@
+body {
+    background-color: var(--white);
+    color: var(--blue);
+    font-family: var(--font-family);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    line-height: 1.6;
+}

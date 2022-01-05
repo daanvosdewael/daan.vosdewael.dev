@@ -1,0 +1,9 @@
+:root {
+    /* #0f19a6 */
+    --blue-hsl: 236deg 83% 35%;
+    --blue: hsl(var(--blue-hsl));
+
+    /* #fff */
+    --white-hsl: 0deg 0% 100%;
+    --white: hsl(var(--white-hsl));
+}

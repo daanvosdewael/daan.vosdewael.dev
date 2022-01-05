@@ -1,0 +1,8 @@
+:root {
+    /* Fonts */
+    --font-family: 'IBM Plex Sans', sans-serif;
+
+    /* Grid */
+    --grid-max-content: 300px;
+    --grid-side-gap: 16px;
+}

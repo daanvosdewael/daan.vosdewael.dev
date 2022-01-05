@@ -5,6 +5,7 @@ import { minifyHtml } from 'vite-plugin-html';
 
 export default defineConfig({
     build: {
+        emptyOutDir: true,
         outDir: '../dist',
     },
     plugins: [
@@ -12,5 +13,6 @@ export default defineConfig({
             removeAttributeQuotes: false,
         }),
     ],
+    publicDir: '../static',
     root: './src',
 });

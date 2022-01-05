@@ -1,0 +1,19 @@
+.links {
+    column-gap: 16px;
+    display: flex;
+    list-style: none;
+    margin-top: 16px;
+    padding: 0;
+
+    &__link {
+        color: var(--blue);
+        display: block;
+        outline: 3px solid transparent;
+        outline-offset: 4px;
+        transition: outline-color 200ms;
+
+        &:focus-visible {
+            outline-color: var(--blue);
+        }
+    }
+}
