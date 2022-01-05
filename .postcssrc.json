@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "postcss-nested": {},
+    "postcss-pxtorem": {
+      "propList": [
+        "*"
+      ]
+    },
+    "at-rule-packer": {}
+  }
+}
