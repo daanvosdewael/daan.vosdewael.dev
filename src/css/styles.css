@@ -1,6 +1,7 @@
 /* Base */
 @import './base/variables.css';
 @import './base/colors.css';
+@import './base/fonts.css';
 @import './base/reset.css';
 @import './base/main.css';
 @import './base/utils.css';
