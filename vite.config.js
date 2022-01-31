@@ -11,9 +11,7 @@ export default defineConfig({
     },
     plugins: [
         viteSingleFile(),
-        createHtmlPlugin({
-            removeAttributeQuotes: false,
-        }),
+        createHtmlPlugin(),
     ],
     publicDir: '../static',
     root: './src',
