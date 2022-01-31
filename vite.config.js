@@ -1,7 +1,7 @@
 /* eslint sort-keys: 'error' */
 
 import { defineConfig } from 'vite';
-import { minifyHtml } from 'vite-plugin-html';
+import { createHtmlPlugin } from 'vite-plugin-html';
 import { viteSingleFile } from 'vite-plugin-singlefile';
 
 export default defineConfig({
@@ -11,7 +11,7 @@ export default defineConfig({
     },
     plugins: [
         viteSingleFile(),
-        minifyHtml({
+        createHtmlPlugin({
             removeAttributeQuotes: false,
         }),
     ],
