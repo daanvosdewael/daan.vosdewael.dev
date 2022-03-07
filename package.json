@@ -20,7 +20,7 @@
     "@commitlint/config-conventional": "16.2.1",
     "@zeebats/eslint-config": "1.0.2",
     "@zeebats/stylelint-config": "1.0.1",
-    "lint-staged": "12.3.4",
+    "lint-staged": "12.3.5",
     "postcss-nested": "5.0.6",
     "postcss-pxtorem": "6.0.0",
     "simple-git-hooks": "2.7.0",
