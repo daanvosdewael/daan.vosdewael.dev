@@ -1,5 +1,0 @@
-{
-  "*.js": "npm run eslint:fix",
-  "*.css": "npm run stylelint:fix",
-  "package.json": "npx sort-package-json"
-}
