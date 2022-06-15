@@ -19,7 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
-    "@zeebats/eslint-config": "1.0.2",
+    "@zeebats/eslint-config": "1.1.0",
     "@zeebats/stylelint-config": "1.0.1",
     "lint-staged": "13.0.1",
     "postcss-nested": "5.0.6",
