@@ -1,10 +1,6 @@
 {
   "plugins": {
     "postcss-nested": {},
-    "postcss-pxtorem": {
-      "propList": [
-        "*"
-      ]
-    }
+    "postcss-pxtorem": { "propList": ["*"] }
   }
 }
