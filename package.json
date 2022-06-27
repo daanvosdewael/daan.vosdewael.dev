@@ -17,7 +17,7 @@
     "not IE 11"
   ],
   "devDependencies": {
-    "@commitlint/cli": "17.0.2",
+    "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.2",
     "@zeebats/eslint-config": "1.2.0",
     "@zeebats/stylelint-config": "1.0.1",
