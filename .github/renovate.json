@@ -1,9 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Europe/Amsterdam",
   "extends": [
     "config:base",
     ":automergeMinor",
-    "group:allNonMajor",
     "schedule:weekends"
   ]
 }
