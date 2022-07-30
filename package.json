@@ -1,32 +1,32 @@
 {
-  "name": "daan.vosdewael.dev",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "eslint": "eslint '**/*.{js,json,mjs}'",
-    "eslint:fix": "npm run eslint -- --fix",
-    "preview": "vite preview",
-    "stylelint": "stylelint './src/**/*.css'",
-    "stylelint:fix": "npm run stylelint -- --fix"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "not dead",
-    "not IE 11"
-  ],
-  "devDependencies": {
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@zeebats/eslint-config": "1.3.1",
-    "@zeebats/stylelint-config": "1.0.1",
-    "lint-staged": "13.0.3",
-    "postcss-nested": "5.0.6",
-    "postcss-pxtorem": "6.0.0",
-    "simple-git-hooks": "2.8.0",
-    "vite": "3.0.4",
-    "vite-plugin-html": "3.2.0",
-    "vite-plugin-singlefile": "0.11.0"
-  }
+	"name": "daan.vosdewael.dev",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"eslint": "eslint '**/*.{js,json,mjs}'",
+		"eslint:fix": "npm run eslint -- --fix",
+		"preview": "vite preview",
+		"stylelint": "stylelint './src/**/*.css'",
+		"stylelint:fix": "npm run stylelint -- --fix"
+	},
+	"browserslist": [
+		"last 2 versions",
+		"not dead",
+		"not IE 11"
+	],
+	"devDependencies": {
+		"@commitlint/cli": "17.0.3",
+		"@commitlint/config-conventional": "17.0.3",
+		"@zeebats/eslint-config": "1.3.1",
+		"@zeebats/stylelint-config": "1.0.1",
+		"lint-staged": "13.0.3",
+		"postcss-nested": "5.0.6",
+		"postcss-pxtorem": "6.0.0",
+		"simple-git-hooks": "2.8.0",
+		"vite": "3.0.4",
+		"vite-plugin-html": "3.2.0",
+		"vite-plugin-singlefile": "0.11.0"
+	}
 }

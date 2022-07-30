@@ -1,33 +1,33 @@
 [[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src *.cloudfront.net; report-uri https://daanvosdewael.report-uri.com/r/d/csp/enforce"
-    Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+	for = "/*"
+	[headers.values]
+		Content-Security-Policy = "default-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src *.cloudfront.net; report-uri https://daanvosdewael.report-uri.com/r/d/csp/enforce"
+		Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+		Referrer-Policy = "strict-origin-when-cross-origin"
+		X-Content-Type-Options = "nosniff"
+		X-Frame-Options = "DENY"
+		X-XSS-Protection = "1; mode=block"
 
 [[redirects]]
-  from = "https://vosdewael.dev/*"
-  to = "https://daan.vosdewael.dev/:splat"
-  status = 301
-  force = true
+	from = "https://vosdewael.dev/*"
+	to = "https://daan.vosdewael.dev/:splat"
+	status = 301
+	force = true
 
 [[redirects]]
-  from = "https://www.vosdewael.dev/*"
-  to = "https://daan.vosdewael.dev/:splat"
-  status = 301
-  force = true
+	from = "https://www.vosdewael.dev/*"
+	to = "https://daan.vosdewael.dev/:splat"
+	status = 301
+	force = true
 
 [[redirects]]
-  from = "https://www.daan.vosdewael.dev/*"
-  to = "https://daan.vosdewael.dev/:splat"
-  status = 301
-  force = true
+	from = "https://www.daan.vosdewael.dev/*"
+	to = "https://daan.vosdewael.dev/:splat"
+	status = 301
+	force = true
 
 [[redirects]]
-  from = "https://daanvosdewaeldev.netlify.com/*"
-  to = "https://daan.vosdewael.dev/:splat"
-  status = 301
-  force = true
+	from = "https://daanvosdewaeldev.netlify.com/*"
+	to = "https://daan.vosdewael.dev/:splat"
+	status = 301
+	force = true
