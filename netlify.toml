@@ -1,7 +1,7 @@
 [[headers]]
 	for = "/*"
 	[headers.values]
-		Content-Security-Policy = "default-src 'self'; style-src 'unsafe-inline'; img-src data:; font-src *.cloudfront.net; report-uri https://daanvosdewael.report-uri.com/r/d/csp/enforce"
+		Content-Security-Policy = "default-src 'self'; style-src 'unsafe-inline'; img-src data:; report-uri https://daanvosdewael.report-uri.com/r/d/csp/enforce"
 		Permissions-Policy = "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
 		Referrer-Policy = "strict-origin-when-cross-origin"
 		X-Content-Type-Options = "nosniff"
