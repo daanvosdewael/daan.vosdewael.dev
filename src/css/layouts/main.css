@@ -1,6 +1,6 @@
 main {
-    align-items: center;
-    display: grid;
-    grid-template-columns: minmax(var(--grid-side-gap), auto) minmax(auto, var(--grid-max-content)) minmax(var(--grid-side-gap), auto);
-    height: 100%;
+	align-items: center;
+	display: grid;
+	grid-template-columns: minmax(var(--grid-side-gap), auto) minmax(auto, var(--grid-max-content)) minmax(var(--grid-side-gap), auto);
+	height: 100%;
 }

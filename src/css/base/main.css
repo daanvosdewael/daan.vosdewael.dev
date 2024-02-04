@@ -1,10 +1,10 @@
 body {
-    background-color: var(--background-color);
-    color: var(--color);
-    font-family: var(--font-family);
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    line-height: 1.6;
+	background-color: var(--background-color);
+	color: var(--color);
+	font-family: var(--font-family);
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	line-height: 1.6;
 }

@@ -1,17 +1,17 @@
 :root {
-    /* Fonts */
-    --font-family: 'IBM Plex Sans', sans-serif;
+	/* Fonts */
+	--font-family: 'IBM Plex Sans', sans-serif;
 
-    /* Grid */
-    --grid-max-content: 300px;
-    --grid-side-gap: 16px;
+	/* Grid */
+	--grid-max-content: 300px;
+	--grid-side-gap: 16px;
 
-    /* Colors */
-    --background-color: var(--white);
-    --color: var(--blue);
+	/* Colors */
+	--background-color: var(--white);
+	--color: var(--blue);
 
-    @media (prefers-color-scheme: dark) {
-        --background-color: var(--blue);
-        --color: var(--white);
-    }
+	@media (prefers-color-scheme: dark) {
+		--background-color: var(--blue);
+		--color: var(--white);
+	}
 }

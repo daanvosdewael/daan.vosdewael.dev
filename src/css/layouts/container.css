@@ -1,7 +1,7 @@
 .container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    grid-column: 2 / 3;
-    row-gap: 16px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	grid-column: 2 / 3;
+	row-gap: 16px;
 }
