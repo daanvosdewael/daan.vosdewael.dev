@@ -2,9 +2,14 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"timezone": "Europe/Amsterdam",
 	"extends": [
-		"config:base",
+		"config:recommended",
 		":automergeMinor",
 		":disableDependencyDashboard",
 		"schedule:weekends"
-	]
+	],
+	"lockFileMaintenance": {
+		"automerge": true,
+		"enabled": true,
+		"schedule": ["before 05:00 on sunday"]
+	}
 }
