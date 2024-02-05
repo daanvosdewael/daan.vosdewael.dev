@@ -1,6 +1,6 @@
 :root {
 	/* Fonts */
-	--font-family: 'IBM Plex Sans', sans-serif;
+	--font-family: system-ui;
 
 	/* Grid */
 	--grid-max-content: 300px;

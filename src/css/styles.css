@@ -1,7 +1,6 @@
 /* Base */
 @import url('./base/variables.css');
 @import url('./base/colors.css');
-@import url('./base/fonts.css');
 @import url('./base/reset.css');
 @import url('./base/main.css');
 @import url('./base/utils.css');
