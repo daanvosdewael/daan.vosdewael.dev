@@ -2,5 +2,5 @@ main {
 	align-items: center;
 	block-size: 100vh;
 	display: grid;
-	grid-template-columns: minmax(var(--grid-side-gap), auto) minmax(auto, var(--grid-max-content)) minmax(var(--grid-side-gap), auto);
+	grid-template-columns: 1fr min(var(--grid-max-content),100% - var(--grid-side-gap) * 2) 1fr;
 }
