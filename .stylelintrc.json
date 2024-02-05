@@ -1,1 +1,5 @@
-{ "extends": ["@zeebats/stylelint-config"] }
+{
+	"extends": ["@zeebats/stylelint-config"],
+	"plugins": ["stylelint-use-logical"],
+	"rules": { "csstools/use-logical": "always" }
+}
