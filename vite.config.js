@@ -9,7 +9,6 @@ export default defineConfig({
 		outDir: '../dist',
 	},
 	plugins: [
-		createHtmlPlugin(),
 		sitemap({
 			hostname: 'https://daan.vosdewael.dev',
 			robots: [
@@ -24,6 +23,7 @@ export default defineConfig({
 			],
 		}),
 		viteSingleFile(),
+		createHtmlPlugin({ minify: true }),
 	],
 	publicDir: '../static',
 	root: './src',
