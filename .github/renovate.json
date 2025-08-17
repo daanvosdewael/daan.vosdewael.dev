@@ -1,10 +1,29 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["config:recommended", ":automergeMinor", ":disableDependencyDashboard", "schedule:weekends"],
-	"lockFileMaintenance": {
-		"automerge": true,
-		"enabled": true,
-		"schedule": ["before 05:00 on sunday"]
-	},
-	"timezone": "Europe/Amsterdam"
+	"baseBranchPatterns": ["main"],
+	"extends": [
+		"config:recommended",
+		":automergeMinor",
+		":maintainLockFilesWeekly",
+		":pinAllExceptPeerDependencies",
+		":rebaseStalePrs",
+		":semanticCommits",
+		":semanticCommitTypeAll(chore)",
+		":timezone(Europe/Amsterdam)",
+		"helpers:disableTypesNodeMajor",
+		"helpers:pinGitHubActionDigests",
+		"npm:unpublishSafe",
+		"schedule:weekends"
+	],
+	"labels": ["dependencies"],
+	"packageRules": [
+		{
+			"description": "Ignore NPM engines",
+			"enabled": false,
+			"matchDepTypes": ["engines"],
+			"matchManagers": ["npm"],
+			"matchPackageNames": ["node", "npm"]
+		}
+	],
+	"postUpdateOptions": ["npmDedupe"]
 }
