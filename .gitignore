@@ -1,14 +1,16 @@
+# System
+.DS_Store
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
 # NPM
-node_modules/
+node_modules
 
 # Build
 dist
-
-# Editor
-.vscode
-
-# System
-.DS_Store
 
 # Local Netlify folder
 .netlify
