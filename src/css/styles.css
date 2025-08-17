@@ -1,15 +1,15 @@
 /* Base */
-@import url('./base/variables.css');
-@import url('./base/colors.css');
-@import url('./base/reset.css');
-@import url('./base/main.css');
-@import url('./base/utils.css');
+@import url("./base/variables.css");
+@import url("./base/colors.css");
+@import url("./base/reset.css");
+@import url("./base/main.css");
+@import url("./base/utils.css");
 
 /* Components */
-@import url('./components/links.css');
-@import url('./components/logo.css');
-@import url('./components/subtitle.css');
+@import url("./components/links.css");
+@import url("./components/logo.css");
+@import url("./components/subtitle.css");
 
 /* Layouts */
-@import url('./layouts/container.css');
-@import url('./layouts/main.css');
+@import url("./layouts/container.css");
+@import url("./layouts/main.css");
