@@ -12,19 +12,6 @@ runs:
         cache: 'npm'
         node-version-file: ".nvmrc"
 
-    - name: Get Node.js major version
-      shell: bash
-      id: node_version
-      run: echo "major=$(node -p 'process.versions.node.split(`.`)[0]')" >> $GITHUB_OUTPUT
-
-    - name: Install npm v11 if Node.js v22
-      if: steps.node_version.outputs.major == '22'
-      shell: bash
-      run: |
-        npm install --global npm@11
-        echo "Node: $(node --version)"
-        echo "NPM: $(npm --version)"
-
     - name: Set global NPM settings
       shell: bash
       run: |
