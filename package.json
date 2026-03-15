@@ -14,7 +14,7 @@
 		"not dead"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "2.3.15",
+		"@biomejs/biome": "2.4.6",
 		"@commitlint/cli": "20.4.4",
 		"@commitlint/config-conventional": "20.4.4",
 		"postcss-nested": "7.0.2",
